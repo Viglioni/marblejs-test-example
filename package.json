@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -rf dist && mkdir -p dist && tsc -p tsconfig.json && echo \"build finished with success\"",
-    "dev": "ts-node-dev -r dotenv/config --transpile-only src/main.ts",
+    "dev": "ts-node-dev --transpile-only src/main.ts",
     "start": "node -r dotenv/config dist/main.js",
     "lint": "eslint --ext ts src",
     "lint:fix": "npm run lint -- --fix && echo \"linter finished with success\"",
