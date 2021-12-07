@@ -1,0 +1,39 @@
+#+title: MarbleJs test example
+* Instructions
+** Install
+#+begin_src shell :exports both :results output 
+  npm i
+#+end_src
+** Run
+#+begin_src shell :exports both :results output 
+  npm run dev
+#+end_src
+** Test
+#+begin_src shell :exports both :results output 
+  npm test
+#+end_src
+* Endpoints
+|--------------+--------------+------|
+| path         | description  | type |
+|--------------+--------------+------|
+| "/"          | health check | GET  |
+| "/character" | create char  | POST |
+|--------------+--------------+------|
+
+- =/character= body must be:
+
+  #+begin_src typescript :exports both :results output 
+    {
+      name: "Name with letters and or spaces",
+      alignment: "Sith" | "Jedi" | "Grey Jedi"
+    }
+#+end_src
+* Test error
+After running the tests I'm getting this error:
+
+#+begin_src text :exports both :results output 
+	Ran all test suites.
+Jest did not exit one second after the test run has completed.
+
+This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
+#+end_src
